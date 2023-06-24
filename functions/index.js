@@ -101,7 +101,7 @@ exports.createReminder = functions.https.onRequest(async (req, res) => {
       // Send email for each reminder
       for (const reminder of reminders) {
         const mailOptions = {
-          from: 'ighoshsubho@gmail.com',
+          from: 'YOUR_EMAIL',
           to: reminder.email,
           subject: 'Reminder',
           text: reminder.message,
