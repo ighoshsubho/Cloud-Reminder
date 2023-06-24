@@ -63,7 +63,7 @@ exports.createReminder = functions.https.onRequest(async (req, res) => {
       for (const reminder of reminders) {
         await twilioClient.messages.create({
           body: reminder.message,
-          from: '9330222262',
+          from: 'YOUR_PHONE_NUMBER',
           to: reminder.phoneNumber,
         });
 
